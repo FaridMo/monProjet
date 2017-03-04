@@ -1,25 +1,25 @@
 package crypto.projet;
 
 /**
- ** Java Program to Implement Fermat Primality Test Algorithm
+ ** Programme Java pour implémenter l'algorithme de test de primalité de Fermat
  **/
 
 import java.util.Scanner;
 import java.util.Random;
 
-/** Class FermatPrimality **/
+/** La Classe FermatPrimality **/
 public class FermatPrimality
 {
-    /** Function to check if prime or not **/
+    /** Fonction pour vérifier si le nombre est premier ou pas **/
     public boolean isPrime(long n, int iteration)
     {
-        /** base case **/
+        /** cas de base **/
         if (n == 0 || n == 1)
             return false;
-        /** base case - 2 is prime **/
+        /** cas de base - 2 est premier **/
         if (n == 2)
             return true;
-        /** an even number other than 2 is composite **/
+        /** Un nombre pair autre que 2 est composé **/
         if (n % 2 == 0)
             return false;
 
@@ -44,24 +44,24 @@ public class FermatPrimality
         }
         return res % c;
     }
-    /** Main function **/
+    /** Fonction Main **/
     public static void main (String[] args)
     {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Fermat Primality Algorithm Test\n");
-        /** Make an object of FermatPrimality class **/
+        System.out.println("Test d'Algorithme de Primalité de Fermat\n");
+        /** Faire un objet de la classe FermatPrimality **/
         FermatPrimality fp = new FermatPrimality();
-        /** Accept number **/
-        System.out.println("Enter number\n");
+        /** Accepter le numéro **/
+        System.out.println("Entrer un nombre\n");
         long num = scan.nextLong();
-        /** Accept number of iterations **/
-        System.out.println("\nEnter number of iterations");
+        /** Accepter le nombre d'itérations **/
+        System.out.println("\nEntrer le nombre d'itérations");
         int k = scan.nextInt();
-        /** check if prime **/
+        /** Vérifie si c'est premier **/
         boolean prime = fp.isPrime(num, k);
         if (prime)
-            System.out.println("\n"+ num +" is prime");
+            System.out.println("\n"+ num +" est premier");
         else
-            System.out.println("\n"+ num +" is composite");
+            System.out.println("\n"+ num +" est composé");
     }
 }
