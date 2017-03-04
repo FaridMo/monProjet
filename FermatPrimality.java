@@ -32,7 +32,7 @@ public class FermatPrimality
         }
         return true;
     }
-    /** Function to calculate (a ^ b) % c **/
+    /** Fonction pour calculer (a ^ b) % c **/
     public long modPow(long a, long b, long c)
     {
         long res = 1;
