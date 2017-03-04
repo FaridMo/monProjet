@@ -3,7 +3,6 @@ package crypto.projet;
 /**
  ** Java Program to Implement Fermat Primality Test Algorithm
  **/
-
 import java.util.Scanner;
 import java.util.Random;
 
